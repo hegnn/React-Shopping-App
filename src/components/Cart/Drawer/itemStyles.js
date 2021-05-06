@@ -7,7 +7,6 @@ export default makeStyles(() => ({
     borderBottom: '1px solid lightblue',
     paddingBottom: '20px',
   },
-  
   cartImage: {
     maxWidth: '80px',
     objectFit: 'contain',
@@ -21,4 +20,7 @@ export default makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
   },
+  detail: {
+    flex:'3'
+  }
 }));

@@ -1,30 +1,32 @@
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-export default makeStyles((theme) => ({
-    card: {
-        margin: '20px 350px 0 350px',
-        display: 'flex'
-    },
+export default makeStyles((theme) => (
+    {
     toolbar: theme.mixins.toolbar,
+    root: {
+        margin: '5vw 10vw 0 10vw',
+        maxWidth: '100%',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex'
+        }
+    },
     media: {
-        margin: '50px',
         height:'500px',
-        width:'auto',
-        objectFit: 'scale-down',
-        maxWidth: '370px'
+        objectFit: 'contain',
+        maxWidth: '370px',
     },
     cardContent: {
-        margin: '50px'
+        margin: '4%',
     },
     title:{
         marginBottom: '50px'
     },
-    description: {
-        
-    },
     price:{
         paddingTop: '20px',
-        float: 'right',
+        display: 'flex',
+        justifyContent: 'flex-end',
         fontWeight: 'bolder',
     },
     button:{

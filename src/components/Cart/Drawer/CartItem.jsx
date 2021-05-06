@@ -7,7 +7,7 @@ const CartItem = ({item, addToCart, removeFromCart}) => {
 
     return (
         <div className={classes.root}>
-            <div>
+            <div className={classes.detail}>
                 <h3> {item.title} </h3>
                 <div className={classes.cartInfo}>
                     <p>Price: ${item.price} </p>

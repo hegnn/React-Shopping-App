@@ -1,8 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   root: {
-    width: '400px',
+    width: '90%',
     padding: '20px',
+    [theme.breakpoints.up('md')]: {
+      width: '400px',
+  }
   },
+  
 }));

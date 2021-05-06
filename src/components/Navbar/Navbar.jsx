@@ -27,6 +27,7 @@ const Navbar = ({ totalItems, cartList, addToCart, removeFromCart }) => {
                     cartItems={cartList} 
                     addToCart={addToCart}
                     removeFromCart={removeFromCart}
+                    cartClose={setIsCartOpen}
                 />
                 </Drawer>
                 

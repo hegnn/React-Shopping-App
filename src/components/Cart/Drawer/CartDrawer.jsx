@@ -4,12 +4,12 @@ import useStyles from './drawerStyles'
 import { Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
-const CartDrawer = ({ cartItems, addToCart, removeFromCart}) => {
+const CartDrawer = ({ cartItems, addToCart, removeFromCart, cartClose}) => {
     const classes = useStyles()
 
     const DisabledButtons = () => (
         <div>
-            <Button disabled={true} component={Link} to="/cart" variant="contained" color="primary" style={{ width: '150px'}}>
+            <Button disabled={true} component={Link} to="/cart" variant="contained" color="primary" style={{ width: '150px'}}  >
                 Cart
             </Button>
             <Button disabled={true} component={Link} to="/checkout" variant="contained" color="secondary" style={{float: 'right', width: '150px'}} >
@@ -20,10 +20,10 @@ const CartDrawer = ({ cartItems, addToCart, removeFromCart}) => {
 
     const Buttons = () => (
         <div>
-            <Button component={Link} to="/cart" variant="contained" color="primary" style={{ width: '150px'}}>
+            <Button component={Link} to="/cart" variant="contained" color="primary" style={{ width: '30%'}} onClick={() => cartClose(false)}>
                 Cart
             </Button>
-            <Button component={Link} to="/checkout" variant="contained" color="secondary" style={{float: 'right', width: '150px'}} >
+            <Button component={Link} to="/checkout" variant="contained" color="secondary" style={{width:'30%', float:'right'}} onClick={() => cartClose(false)}>
                 Checkout
             </Button>
         </div>

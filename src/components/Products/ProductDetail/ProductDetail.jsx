@@ -20,13 +20,14 @@ const ProductDetail = ({addToCart}) => {
     return (
        <div >
            <div className={classes.toolbar} />
-           <Card className={classes.card}>
+           <Card className={classes.root}>
                 <CardMedia  className={classes.media} component="img" image={item.image} title={item.title}/>
                 <CardContent className={classes.cardContent} >
                     <Typography className={classes.title} variant="h3" > {item.title} </Typography>
                     <Typography className={classes.description} variant="body1" > {item.description} </Typography>
-                    <Typography className={classes.price} variant="h4" color="initial"> $ {item.price} </Typography>
+                    <br />
                     <Divider/>
+                    <Typography className={classes.price} variant="h4" color="initial"> $ {item.price} </Typography>
                     <Button
                         onClick={() => addToCart(item)}
                         size="large"

@@ -65,7 +65,4 @@ export default makeStyles((theme) => ({
       width: '20ch',
     },
   },
-  drawer: {
-    width: '700px'
-  }
 }));
